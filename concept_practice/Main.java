@@ -15,7 +15,7 @@ public class Main {
         Person ada= new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN",1200);
         Person esko= new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki",5600);
 
-        ArrayList<Person> persons = new ArrayList<Person>();
+        ArrayList<Person> persons = new ArrayList<>();
         persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
         persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
@@ -125,3 +125,16 @@ class Teacher extends Person{
         return super.toString()+"\n"+"Salary"+" "+this.salary+" "+"euro/month" ;
     }
 }
+
+// ------- Task-3 ------
+// actual type of an object means kon class er object
+
+// main concept behind polymorphism(object) that one type of variable er moddhe arek type er value store kora which is reference(memory address)
+// Objects are polymorphic- object er bohu rupi achoron hote pare
+// Objects can be treated as instances of their own class, their superclass(es), or any interface(s) they implement.
+// 🔍 In simple words:
+// An object of a subclass can take many forms — it can behave like:
+// its own class
+// a parent class
+// an interface it implements
+// This ability to be used in different ways depending on context is what we call polymorphism.
