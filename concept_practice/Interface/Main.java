@@ -58,6 +58,8 @@ class CustomTacoBox implements Tacobox{
 }
 
 
+// ---------- One class to multiple class communication--------
+
 interface NotificationService {
     void sendMessage(String recipient, String message);
 }
@@ -93,3 +95,46 @@ class NotificationSender {
 
     
 }
+
+
+// ------------ without interface ---------- 
+
+
+//  class EmailService {
+//     public void sendEmail(String recipient, String message) {
+//         System.out.println("Sending email to: " + recipient + " with message: " + message);
+//         // Actual email sending logic would go here
+//     }
+// }
+
+//  class SMSService {
+//     public void sendSMS(String recipient, String message) {
+//         System.out.println("Sending SMS to: " + recipient + " with message: " + message);
+//         // Actual SMS sending logic would go here
+//     }
+// }
+
+//  class NotificationSender {
+//     // Now we need specific references
+//     private EmailService emailService;
+//     private SMSService smsService;
+
+//     public NotificationSender() {
+//         this.emailService = new EmailService();
+//         this.smsService = new SMSService();
+//     }
+
+//     public void sendEmailAlert(String user, String alertMessage) {
+//         emailService.sendEmail(user, alertMessage);
+//     }
+
+//     public void sendSMSAlert(String phone, String alertMessage) {
+//         smsService.sendSMS(phone, alertMessage);
+//     }
+
+//     public static void main(String[] args) {
+//         NotificationSender notifier = new NotificationSender();
+//         notifier.sendEmailAlert("user@example.com", "System is down!");
+//         notifier.sendSMSAlert("123-456-7890", "High priority alert!");
+//     }
+// }
