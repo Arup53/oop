@@ -6,17 +6,21 @@ public class Student extends Person {
     private String  major ;
     private int    year;
     private  double gpa;
-    private List<Course> enrolledCourse= new ArrayList<>();
+    // private List<Course> enrolledCourse= new ArrayList<>();
 
-
+    public Student(String studentId, String major, int year ){
+        this.studentId= studentId ;
+        this.major= major ;
+        this.year = year ;
+    }
 
     @Override
     public String getRole(){
         return "Student" ;
     }
 
-    public  void enrollInCourse(Course course){
-        enrolledCourse.add(course);
-    }
+    // public  void enrollInCourse(Course course){
+    //     enrolledCourse.add(course);
+    // }
 
 }
