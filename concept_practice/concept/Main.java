@@ -1,15 +1,4 @@
-public class Main {
 
-    public static void main(String[] args){
-
-      Customer c1= new Customer("Koi");
-      Order o1= new Order("ORD35");
-
-      c1.placeOrder(o1);
-      c1.viewOrder();
-    }
-
-}
 
 class Customer {
     private String name;
@@ -52,3 +41,15 @@ class Order {
 
 
 
+public class Main {
+
+    public static void main(String[] args){
+
+      Customer c1= new Customer("Koi");
+      Order o1= new Order("ORD35");
+
+      c1.placeOrder(o1);
+      c1.viewOrder();
+    }
+
+}
