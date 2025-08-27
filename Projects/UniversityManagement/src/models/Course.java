@@ -20,20 +20,28 @@ public class Course {
     }
 
 
+    
+
     public void assignSchedule(Schedule schedule){
         this.schedule= schedule ;
     }
 
-    public String addStudent(Student student){
-        if(enrolledStudents.size() <= maxCapacity){
-          enrolledStudents.add(student);
-          return "Enrollement successful" ;
-        }else {
-            return "Course is at max capacity";
+    public boolean addStudent(Student student) {
+        if (!isFull() && !enrolledStudents.contains(student)) {
+            return enrolledStudents.add(student);
         }
+        return false;  // Simple boolean return
     }
 
-    public int getAvaliableSpot(){
+    public boolean removeStudent(Student student) {
+        return enrolledStudents.remove(student);
+    }
+
+    public boolean isFull() {
+        return enrolledStudents.size() >= maxCapacity;
+    }
+
+    public int getRemaingSeat(){
         return maxCapacity - enrolledStudents.size() ;
     }
 
