@@ -33,8 +33,6 @@ public class Student extends Person {
         return new ArrayList<>(enrolledCourses); // Return copy for encapsulation
     }
 
-    public boolean isEnrolledIn(Course course) {
-        return enrolledCourses.contains(course);
-    }
+ 
 
 }
