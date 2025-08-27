@@ -6,7 +6,7 @@ public class Student extends Person {
     private String  major ;
     private int    year;
     private  double gpa;
-    private List<Course> enrolledCourse= new ArrayList<>();
+    private List<Course> enrolledCourses= new ArrayList<>();
 
     public Student(String studentId, String major, int year ){
         this.studentId= studentId ;
@@ -19,8 +19,22 @@ public class Student extends Person {
         return "Student" ;
     }
 
-    public  void enrollInCourse(Course course){
-        enrolledCourse.add(course);
+       public void addCourse(Course course) {
+        if (!enrolledCourses.contains(course)) {
+            enrolledCourses.add(course);
+        }
+    }
+
+    public void removeCourse(Course course) {
+        enrolledCourses.remove(course);
+    }
+
+    public List<Course> getEnrolledCourses() {
+        return new ArrayList<>(enrolledCourses); // Return copy for encapsulation
+    }
+
+    public boolean isEnrolledIn(Course course) {
+        return enrolledCourses.contains(course);
     }
 
 }
