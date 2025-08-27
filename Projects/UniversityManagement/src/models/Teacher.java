@@ -18,7 +18,7 @@ public class Teacher extends Person {
         return "Teacher";
     }}
 
-    public void assignCourse(Course course){
+    public void addCourse(Course course){
         coursesTaught.add(course);
     }
     public void removeCourse(Course course){

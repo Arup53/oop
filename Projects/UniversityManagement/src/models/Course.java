@@ -20,8 +20,6 @@ public class Course {
     }
 
 
-    
-
     public void assignSchedule(Schedule schedule){
         this.schedule= schedule ;
     }
