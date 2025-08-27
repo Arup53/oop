@@ -6,7 +6,7 @@ public class Student extends Person {
     private String  major ;
     private int    year;
     private  double gpa;
-    // private List<Course> enrolledCourse= new ArrayList<>();
+    private List<Course> enrolledCourse= new ArrayList<>();
 
     public Student(String studentId, String major, int year ){
         this.studentId= studentId ;
@@ -19,8 +19,8 @@ public class Student extends Person {
         return "Student" ;
     }
 
-    // public  void enrollInCourse(Course course){
-    //     enrolledCourse.add(course);
-    // }
+    public  void enrollInCourse(Course course){
+        enrolledCourse.add(course);
+    }
 
 }
