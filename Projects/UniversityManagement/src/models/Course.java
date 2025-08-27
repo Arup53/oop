@@ -20,9 +20,7 @@ public class Course {
     }
 
 
-    public void assignTeacher(Teacher teacher){
-        this.teacher= teacher ;
-    }
+    
 
     public void assignSchedule(Schedule schedule){
         this.schedule= schedule ;
@@ -40,7 +38,6 @@ public class Course {
     public int getAvaliableSpot(){
         return maxCapacity - enrolledStudents.size() ;
     }
-
 
 
 }
