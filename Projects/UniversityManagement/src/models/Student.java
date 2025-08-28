@@ -1,3 +1,5 @@
+package models;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -19,7 +21,7 @@ public class Student extends Person {
         return "Student" ;
     }
 
-       public void addCourse(Course course) {
+    public void addCourse(Course course) {
         if (!enrolledCourses.contains(course)) {
             enrolledCourses.add(course);
         }
@@ -28,11 +30,15 @@ public class Student extends Person {
     public void removeCourse(Course course) {
         enrolledCourses.remove(course);
     }
-
-    public List<Course> getEnrolledCourses() {
-        return new ArrayList<>(enrolledCourses); // Return copy for encapsulation
+    
+    public String getStudentId(){
+        return studentId ;
     }
-
+    
+    
+    public List<Course> getEnrolledCourses() {
+            return new ArrayList<>(enrolledCourses); // Return copy for encapsulation
+        }
  
 
 }

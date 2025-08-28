@@ -28,7 +28,7 @@ public class Course {
         if (!isFull() && !enrolledStudents.contains(student)) {
             return enrolledStudents.add(student);
         }
-        return false;  // Simple boolean return
+        return false;  
     }
 
     public boolean removeStudent(Student student) {

@@ -1,3 +1,5 @@
+package models;
+
 public abstract class Person {
     protected String id;
     protected String name ;
