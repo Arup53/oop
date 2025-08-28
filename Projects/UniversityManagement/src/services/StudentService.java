@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import models.Student;
 
@@ -35,6 +36,16 @@ public class StudentService {
         return true ;
     }
 
+    public Student findStudentById(String studentId) {
+        if (studentId == null || studentId.trim().isEmpty()) {
+            throw new IllegalArgumentException("Student ID cannot be null or empty");
+        }
 
+        Student student = studentIndex.get(studentId);
+        if (student == null) {
+            throw new NoSuchElementException("Student with ID " + studentId + " not found");
+        }
+        return student;
+    }
 
 }
