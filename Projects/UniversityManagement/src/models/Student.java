@@ -37,7 +37,7 @@ public class Student extends Person {
     
     
     public List<Course> getEnrolledCourses() {
-            return new ArrayList<>(enrolledCourses); // Return copy for encapsulation
+            return new ArrayList<>(enrolledCourses); 
         }
  
 
