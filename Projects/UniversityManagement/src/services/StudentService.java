@@ -21,7 +21,7 @@ public class StudentService {
 
     // add student to system
 
-    public Boolean addStudentToSystem(Student student){
+    public boolean addStudentToSystem(Student student){
         
         if(student ==null || student.getStudentId() == null){
             throw new IllegalArgumentException("Student and student ID cannot be null");

@@ -44,5 +44,9 @@ public class Course {
         return maxCapacity - enrolledStudents.size() ;
     }
 
+    public String getCourseId(){
+        return courseId ;
+    }
+
 
 }
