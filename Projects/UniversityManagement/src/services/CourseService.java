@@ -17,7 +17,7 @@ public class CourseService {
     }
 
     // implement crud on courses model with valiadation ; a middle layer for calling the methods of course  class
-    public boolean AddCourse(Course course){
+    public boolean addCourse(Course course){
         if(course == null || course.getCourseId()== null) {
             throw new IllegalArgumentException("Course and course id can't be null");
         }
@@ -31,4 +31,14 @@ public class CourseService {
         return true ;
     }
 
+    public Course findCourseById(String courseId){
+        if(courseId== null || courseId.trim().isEmpty()){
+            throw new IllegalArgumentException("course id can't be null");
+        }
+        Course course= courseIndex.get(courseId);
+        if(course==null){
+            throw new IllegalArgumentException("Course not found");
+        }
+        return course ;
+    }
 }
