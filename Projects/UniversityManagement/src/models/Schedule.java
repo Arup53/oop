@@ -1,3 +1,4 @@
+package models ;
 public class Schedule {
     private String dayOfWeek ;
     private String startTime ;

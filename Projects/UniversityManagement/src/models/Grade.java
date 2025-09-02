@@ -1,3 +1,4 @@
+package models ;
 public class Grade {
     private Student student;
     private Course course;
